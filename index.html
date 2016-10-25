@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script language="javascript">
+            function load_ajax()
+{
+    // URL
+    var url = "bai1.php";
+ 
+    // Data
+    var data = {
+        number : $('#number').val()
+    };
+ 
+    // Success Function
+    var success = function (result){
+        $('#result').html(result);
+    };
+ 
+    // Result Type
+    var dataType = 'text';
+ 
+    // Send Ajax
+    $.post(url, data, success, dataType);
+}
+        </script>
+    </head>
+    <body>
+        <div id="result">
+            Nội dung ajax sẽ được load ở đây
+        </div>
+        <br/>
+        <input type="text" value="" id="number"/>
+        <input type="button" name="clickme" id="clickme" onclick="load_ajax()" value="Click Me"/>
+    </body>
+</html>
