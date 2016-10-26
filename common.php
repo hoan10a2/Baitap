@@ -20,14 +20,22 @@ function themdauso($strNum) {
         }
         return $result;
 }
-function tinhsongay() {
 
 
-$date1 = new DateTime("2016-11-20");
-$date2 = new DateTime("2016-10-26");
+function tinhsongay($d1,$d2) {
+
+$date1 = new DateTime($d1);
+$date2 = new DateTime($d2);
 $ss = $date1->diff($date2);
-echo $ss->y . " years, " . $ss->m . " months, " . $ss->d . " days ";
+return $ss;
 }
+ 
+
+
+
+
+
+
 
 
 ?>
